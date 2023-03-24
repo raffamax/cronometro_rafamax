@@ -1,3 +1,20 @@
+/* @font-face {
+    font-family: ds-digital;
+    src: url(/fonts/DS-DIGI.TTF);
+} */
+
+@import url(//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons);
+
+@font-face {font-family: "clockicons"; src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot"); src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff") format("woff"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.svg#clockicons") format("svg"); }
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(42, 42, 42);
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: ds-digital; */
+}
+
 #resetButton {
     display: none;
 }
@@ -5,3 +22,78 @@
 #lapButton {
     display: none;
 }
+
+#stopwatch {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 10% 25% 0%;
+    color: yellow;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: 2% 35% 2%;
+}
+
+#timer {
+    font-size: 30pt;
+    font-family: clockicons;
+}
+#miliseconds{
+ font-size: 15pt;   
+}
+
+#currentlap {
+    color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0% 25% 0%;
+    font-size: 15pt;
+    font-family: clockicons;
+
+}
+
+#laps {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0% 25% 0%;
+    font-size: 15pt;
+    font-family: clockicons;
+}
+
+#startStopButton {
+    background-color: green;
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    color: white;
+}
+
+#lapButton {
+    background-color: grey;
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    color: white;
+}
+
+#resetButton {
+    background-color: grey;
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    color: white;
+}
+
