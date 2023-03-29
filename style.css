@@ -6,7 +6,8 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(10, 10, 10);
+    box-sizing: border-box;
 }
 
 button {
@@ -26,16 +27,18 @@ button {
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin: 10% 25% 0%;
-    color: yellow;
+    /* margin: 10% 25% 0%; */
+    margin: 100px auto 0px;
+    color: #F2D70C;
 }
 
 #buttons {
+    width: 250px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    margin: 2% 35% 2%;
+    margin: 10px auto;
 }
 
 #timer {
@@ -44,11 +47,16 @@ button {
 }
 
 #startStopButton {
-    background-color: green;
+    background-color: #3E9C08;
     width: 50px;
     height: 25px;
     border-radius: 5px;
     color: white;
+}
+
+#startStopButton:hover {
+    cursor: pointer;
+    background-color: #2f7407;
 }
 
 #lapButton {
@@ -59,6 +67,11 @@ button {
     color: white;
 }
 
+#lapButton:hover{
+    cursor: pointer;
+    background-color: rgb(103, 103, 103);
+}
+
 #resetButton {
     background-color: grey;
     width: 50px;
@@ -67,78 +80,56 @@ button {
     color: white;
 }
 
+#resetButton:hover {
+    cursor: pointer;
+    background-color: rgb(103, 103, 103);
+}
+
 table {
     margin: auto;
     border-collapse: collapse;
+    text-align: center;
 }
 
 thead {
-    color: yellow;
+    color: #F2D70C;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: none;
 }
 
 td {
-    /* border: 1px solid black; */
-    padding: 10px 50px 5px 5px;
-}
-
-
-
-
-/* #currentlapsection {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-#currentlapletter {
-    color: green;
-    font-family: sans-serif;
-}
-
-#currentlap {
-    color: green;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 120px;
+    height: 30px;
     text-align: center;
-    justify-content: center;
-    margin: 0% 5% 0%;
-    font-size: 15pt;
+}
+
+#lapNumber {
+    color: #F2D70C;
     font-family: clockicons;
-
-}
-
-#lapsection {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin: 0% 5% 0%;
-    color: white;
-    flex-direction: row;
-
-    
-    align-items: center;
-    text-align: center;
-    justify-content: center;
     font-size: 15pt;
+}
+
+#lapTime , #totalLapTime {
     font-family: clockicons;
-}
-
-#lapsname{
-    color: white;
-    font-family: sans-serif;
-}
-
-#laps {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 0% 5% 0%;
     font-size: 15pt;
-    font-family: clockicons;
+    color: #F2D70C;
 }
- */
+
+#currentLapNumber {
+    color: #3E9C08;
+    font-family: clockicons;
+    font-size: 15pt;
+}
+
+#currentLapTime {
+    font-family: clockicons;
+    font-size: 15pt;
+    color: #3E9C08;
+}
+
+#currentLapTotal {
+    font-family: clockicons;
+    font-size: 15pt;
+    color: #3E9C08;
+}

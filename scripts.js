@@ -30,7 +30,9 @@ function formatLap(currentlaptime){
 
 function updatelap() {
   currentlaptime++;
-  document.getElementById('currentlap').innerHTML = `${currentlapNumber.toString().padStart(2, '0')} - ${formatLap(currentlaptime)}`;
+  document.getElementById('currentLapNumber').textContent = `${currentlapNumber.toString().padStart(2, '0')}`;
+  document.getElementById('currentLapTime').textContent = `${formatLap(currentlaptime)}`
+  document.getElementById('currentLapTotal').textContent = `${formatTime(time)}`
 }
 
 function startStop() {
@@ -39,24 +41,32 @@ function startStop() {
     clearInterval(lapInterval);
     running = false;
     document.getElementById('startStopButton').textContent = 'Start';
-    document.getElementById('startStopButton').style = 'background-color: green;';
+    document.getElementById('startStopButton').style = 'background-color: #3E9C08;';
+    document.getElementById('startStopButton').style = 'hover: #2f7407;';
+
     document.getElementById('lapButton').style.display = 'none';
     document.getElementById('resetButton').style.display = 'inline';
+    
+    document.getElementById('currentLapNumber').style.color = '#F2D70C';
+    document.getElementById('currentLapTime').style.color = '#F2D70C';
+    document.getElementById('currentLapTotal').style.color = '#F2D70C';
+
 
   } else {
     timerInterval = setInterval(updateTimer, 10);
     lapInterval = setInterval(updatelap, 10);
     running = true;
     document.getElementById('startStopButton').textContent = 'Stop';
-    document.getElementById('startStopButton').style = 'background-color: red;';
+    document.getElementById('startStopButton').style = 'background-color: #DB1619;';
+
     document.getElementById('lapButton').style.display = 'inline';
     document.getElementById('resetButton').style.display = 'none';
-    let currentLapLetter = document.createElement('div');
-    currentLapLetter.setAttribute("id","currentlapletter")
-    currentLapLetter.textContent = 'Lap';
-    // currentLapLetter.style.color = 'green';
-    // currentLapLetter.setAttribute('id , currentlapletter');
-    document.getElementById('currentlapsection').prepend(currentLapLetter);
+    document.getElementById('thead').style.display = 'contents';
+
+    document.getElementById('currentLapNumber').style.color = '#3E9C08';
+    document.getElementById('currentLapTime').style.color = '#3E9C08';
+    document.getElementById('currentLapTotal').style.color = '#3E9C08';
+
 
   }
 }
@@ -70,6 +80,7 @@ function lap() {
   }
   lapTimes.push(time);
   let lapNumber = lapTimes.length;
+
   let lapRow = document.createElement('tr');
   document.getElementById('tableBody').prepend(lapRow);
 
@@ -91,16 +102,5 @@ function lap() {
 }
 
 function reset() {
-  clearInterval(timerInterval);
-  clearInterval(lapInterval);
-  running = false;
-  time = 0;
-  currentlaptime = 0;
-  currentlapNumber = 1;
-  lapTimes = [];
-  document.getElementById('timer').textContent = '00:00:00:00';
-  document.getElementById('currentlap').innerHTML = '';
-  document.getElementById('laps').innerHTML = '';
-  document.getElementById('startStopButton').textContent = 'Start';
-  document.getElementById('resetButton').style.display = 'none';
+  location.reload()
 }

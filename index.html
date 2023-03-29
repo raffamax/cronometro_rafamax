@@ -18,26 +18,28 @@
         <button id="lapButton" onclick="lap()">Lap</button>
       </div>
 
-      <table>
-        <thead>
-          <td>Lap</td>
-          <td>time</td>
-          <td>total</td>
+      <table id="tableMain">
+
+        <thead id="thead">
+          <tr>
+            <td>Lap</td>
+            <td>Time</td>
+            <td>Total</td>
+          </tr>
+          <tr id="currentlap">
+            <td id="currentLapNumber"></td>
+            <td id="currentLapTime"></td>
+            <td id="currentLapTotal"></td>
+          </tr>
+        
         </thead>
+
         <tbody id="tableBody">
-          <td id="lapNumber"></td>
-          <td id="lapTime"></td>
-          <td id="totalLapTime"></td>
+
         </tbody>
+      
       </table>
       
-      <!-- <div id="currentlapsection">
-        <div id="currentlap"></div>
-      </div>
-
-      <div id="lapsection">
-        <div id="laps"></div>
-      </div> -->
 
       <script src="scripts.js"></script>
 </body>
