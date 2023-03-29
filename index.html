@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="stopwatch">
-      <div id="timer">00:00:00<span id="miliseconds">.00</span></div>
+      <div id="timer">00:00:00<span id="miliseconds">:00</span></div>
     </div>
 
       <div id="buttons">
@@ -18,8 +18,26 @@
         <button id="lapButton" onclick="lap()">Lap</button>
       </div>
 
-      <div id="currentlap"></div>
-      <div id="laps"></div>
+      <table>
+        <thead>
+          <td>Lap</td>
+          <td>time</td>
+          <td>total</td>
+        </thead>
+        <tbody id="tableBody">
+          <td id="lapNumber"></td>
+          <td id="lapTime"></td>
+          <td id="totalLapTime"></td>
+        </tbody>
+      </table>
+      
+      <!-- <div id="currentlapsection">
+        <div id="currentlap"></div>
+      </div>
+
+      <div id="lapsection">
+        <div id="laps"></div>
+      </div> -->
 
       <script src="scripts.js"></script>
 </body>

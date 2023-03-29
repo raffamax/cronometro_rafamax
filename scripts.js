@@ -30,7 +30,7 @@ function formatLap(currentlaptime){
 
 function updatelap() {
   currentlaptime++;
-  document.getElementById('currentlap').innerHTML = `Lap ${currentlapNumber.toString().padStart(2, '0')} -> ` + formatLap(currentlaptime);
+  document.getElementById('currentlap').innerHTML = `${currentlapNumber.toString().padStart(2, '0')} - ${formatLap(currentlaptime)}`;
 }
 
 function startStop() {
@@ -42,6 +42,7 @@ function startStop() {
     document.getElementById('startStopButton').style = 'background-color: green;';
     document.getElementById('lapButton').style.display = 'none';
     document.getElementById('resetButton').style.display = 'inline';
+
   } else {
     timerInterval = setInterval(updateTimer, 10);
     lapInterval = setInterval(updatelap, 10);
@@ -50,6 +51,13 @@ function startStop() {
     document.getElementById('startStopButton').style = 'background-color: red;';
     document.getElementById('lapButton').style.display = 'inline';
     document.getElementById('resetButton').style.display = 'none';
+    let currentLapLetter = document.createElement('div');
+    currentLapLetter.setAttribute("id","currentlapletter")
+    currentLapLetter.textContent = 'Lap';
+    // currentLapLetter.style.color = 'green';
+    // currentLapLetter.setAttribute('id , currentlapletter');
+    document.getElementById('currentlapsection').prepend(currentLapLetter);
+
   }
 }
 
@@ -62,9 +70,24 @@ function lap() {
   }
   lapTimes.push(time);
   let lapNumber = lapTimes.length;
-  let lapDiv = document.createElement('div');
-  lapDiv.textContent = `Lap ${lapNumber.toString().padStart(2, '0')} ->  ${formatTime(lapTime)}`;
-  document.getElementById('laps').prepend(lapDiv);
+  let lapRow = document.createElement('tr');
+  document.getElementById('tableBody').prepend(lapRow);
+
+  let lapTotalPrint = document.createElement('td');
+  lapTotalPrint.setAttribute("id","totalLapTime");
+  lapTotalPrint.textContent = `${formatTime(time)}`;
+  document.getElementById('tableBody').prepend(lapTotalPrint);
+
+  let lapPrint = document.createElement('td');
+  lapPrint.setAttribute("id","lapTime");
+  lapPrint.textContent = `${formatTime(lapTime)}`;
+  document.getElementById('tableBody').prepend(lapPrint);
+
+  let lapsName = document.createElement('td');
+  lapsName.setAttribute("id","lapNumber");
+  lapsName.textContent = `${lapNumber.toString().padStart(2, '0')}`
+  document.getElementById('tableBody').prepend(lapsName);
+  
 }
 
 function reset() {
