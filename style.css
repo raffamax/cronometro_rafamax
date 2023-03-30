@@ -45,16 +45,19 @@ button {
 }
 
 #timer {
-    font-size: 30pt;
+    font-size: 40pt;
     font-family: clocks;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #startStopButton {
     background-color: #3E9C08;
-    width: 50px;
-    height: 25px;
-    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
     color: white;
+    font-size: 20px;
 }
 
 #startStopButton:hover {
@@ -64,10 +67,11 @@ button {
 
 #lapButton {
     background-color: grey;
-    width: 50px;
-    height: 25px;
-    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
     color: white;
+    font-size: 20px;
 }
 
 #lapButton:hover{
@@ -77,10 +81,11 @@ button {
 
 #resetButton {
     background-color: grey;
-    width: 50px;
-    height: 25px;
-    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
     color: white;
+    font-size: 20px;
 }
 
 #resetButton:hover {
