@@ -1,7 +1,10 @@
 
-@import url(//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons);
-
-@font-face {font-family: "clockicons"; src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot"); src: url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.woff") format("woff"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/84cb021d5f9af287ffff84b61beef6dc.svg#clockicons") format("svg"); }
+@font-face {
+    font-family: 'clocks';
+    src: url('fonts/clockicons.otf') format('opentype'), url('fonts/clockicons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -43,7 +46,7 @@ button {
 
 #timer {
     font-size: 30pt;
-    font-family: clockicons;
+    font-family: clocks;
 }
 
 #startStopButton {
@@ -106,30 +109,30 @@ td {
 
 #lapNumber {
     color: #F2D70C;
-    font-family: clockicons;
+    font-family: clocks;
     font-size: 15pt;
 }
 
 #lapTime , #totalLapTime {
-    font-family: clockicons;
+    font-family: clocks;
     font-size: 15pt;
     color: #F2D70C;
 }
 
 #currentLapNumber {
     color: #3E9C08;
-    font-family: clockicons;
+    font-family: clocks;
     font-size: 15pt;
 }
 
 #currentLapTime {
-    font-family: clockicons;
+    font-family: clocks;
     font-size: 15pt;
     color: #3E9C08;
 }
 
 #currentLapTotal {
-    font-family: clockicons;
+    font-family: clocks;
     font-size: 15pt;
     color: #3E9C08;
 }
