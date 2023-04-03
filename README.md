@@ -1,11 +1,11 @@
 # Cronômetro Rafa Max
-![](img/cronometro%20inicio.png)
+![](img/cronometro_inicio.png)
 ___
 Este cronômetro é o meu primeiro projeto com HTML, CSS, e JavaScript.
 Com ele é possível saber o tempo da volta atual em tempo real, e o tempo das últimas voltas. Me inspirei no cronômetro nativo do iphone, e acrescentei a informação do tempo total do período em que estava em cada volta.
 
 ___
-![](img/cronometro%20contando.png)
+![](img/cronometro_contando.png)
 
 Este é um exemplo do cronômetro funcionando. Para testar, clique [aqui](https://cronometro-rafamax.netlify.app/).
 ___
